@@ -11,7 +11,7 @@
     ansible.builtin.debug:
       msg: "{{directory}}"
     
-  - when: directory.stat.exists == true
+  - when: directory.stat.exists == False
     name: CREATING A DIRECTORY
     become: yes 
     ansible.builtin.file:
