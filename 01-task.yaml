@@ -1,11 +1,12 @@
+---
 - name: CREATING USER VIA ANSIBLE
   hosts: node
   tasks:
 
-  -name: CHECKING USER IS EXISTS OR NOT
-    ansible.builtin.command: id roboshop
-    register: output
-
-  - name: PRINTITNG THE OUTPUT
-     ansible.builtin.debug:
-     msg: "{{ouput}}"
+    - name: CHECKING USER IS EXISTS OR NOT
+      ansible.builtin.command: id roboshop
+      register: output
+      
+    - name: PRINTITNG THE OUTPUT
+      ansible.builtin.debug:
+        msg: "{{ouput}}"
