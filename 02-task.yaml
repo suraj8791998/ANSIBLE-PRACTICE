@@ -1,0 +1,13 @@
+- name: CREATING DIRECTORY IF NOT EXISTS
+  hosts: node
+  tasks:
+
+  - name: CHECKING DIRECTORY EXIST OR NOT
+    ansible.builtin.stat:
+      path: /app
+    register: directory
+
+  - name: PRINTING THE OUTPUT
+    ansible.builtin.debug:
+      msg: "{{directory}}"
+    
