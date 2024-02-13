@@ -10,7 +10,7 @@
 
     - name: PRINTITNG THE OUTPUT
       ansible.builtin.debug:
-        msg: "{{ouput}}"
+        msg: "{{output}}"
         
     - name: CREATING USER
       ansible.builtin.user:
