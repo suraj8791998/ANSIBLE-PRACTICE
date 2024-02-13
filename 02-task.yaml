@@ -11,3 +11,10 @@
     ansible.builtin.debug:
       msg: "{{directory}}"
     
+  - when: directory.stat.exists == true
+    name: CREATING A DIRECTORY
+    become: yes 
+    ansible.builtin.file:
+      path: /app
+      state: directory
+   
