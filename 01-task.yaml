@@ -6,12 +6,12 @@
     - name: CHECKING USER IS EXISTS OR NOT
       ansible.builtin.command: id roboshop
       register: output
+      ignore_errors: true
 
     - name: PRINTITNG THE OUTPUT
       ansible.builtin.debug:
         msg: "{{ouput}}"
-      ignore_errors: true
-
+        
     - name: CREATING USER
       ansible.builtin.user:
         become: yes
