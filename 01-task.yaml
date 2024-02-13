@@ -16,4 +16,4 @@
       ansible.builtin.user:
         become: yes
         name: roboshop
-        when: output.rc ! = 0
+        when: output.rc != 0
