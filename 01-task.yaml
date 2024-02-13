@@ -10,7 +10,7 @@
     - name: PRINTITNG THE OUTPUT
       ansible.builtin.debug:
         msg: "{{ouput}}"
-        ignore_error: true
+      ignore_errors: true
 
     - name: CREATING USER
       ansible.builtin.user:
